@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>ARIA-CHECK</title>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="../../css/reveal.min.css">
+		<link rel="stylesheet" href="../../css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="../../lib/css/zenburn.css">
+	</head>
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+				<section>
+					<h1>ARIA-CHECK</h1>
+					<h3></h3>
+					<p>
+						<small><a href="http://wwatana.be">Willian Massami Watanabe</a> / <a href="http://github.com/watinha">@watinha</a></small>
+					</p>
+				</section>
+
+				<section data-transition="linear" data-background-size="900px" data-background="#FFFFFF url(images/slide-1-1989.png) no-repeat center">
+				</section>
+
+				<section data-transition="linear" data-background-size="900px" data-background="#FFFFFF url(images/slide-2-2005.png) no-repeat center">
+				</section>
+
+				<section data-transition="linear" data-background-size="900px" data-background="#FFFFFF url(images/slide-3-hoje.png) no-repeat center">
+				</section>
+
+				<section data-transition="linear" data-background-size="900px" data-background="#FFEEBB url(images/slide-4-como.png) no-repeat center">
+				</section>
+                <section data-transition="linear" data-background-size="900px" data-background="#FFFFFF">
+                    <style type="text/css">
+                        #html5 {
+                            border: none;
+                        }
+                    </style>
+                    <img id="html5" src="images/html5-accessibility.jpg"></img>
+                    <h2>HTML5 e ARIA</h2>
+                </section>
+                <section data-transition="linear" data-background-size="900px" data-background="#99AAFF">
+                    <style type="text/css">
+                        #code-examples {
+                            opacity: 1;
+                        }
+                        #code-examples #primeira-imagem {
+                            z-index: -1;
+                            position: relative;
+                            opacity: 1;
+                        }
+                        #code-examples.visible #primeira-imagem {
+                            z-index: -1;
+                            position: relative;
+                            -webkit-transform: scale(0.7) translateX(-400px);
+                               -moz-transform: scale(0.7) translateX(-400px);
+                                -ie-transform: scale(0.7) translateX(-400px);
+                                 -o-transform: scale(0.7) translateX(-400px);
+                                    transform: scale(0.7) translateX(-400px);
+                        }
+                        #code-examples #segunda-imagem {
+                            position: relative;
+                            z-index: 0;
+                            opacity: 0;
+                        }
+                        #code-examples.visible #segunda-imagem {
+                            z-index: 0;
+                            position: relative;
+                            opacity: 1;
+                            -webkit-transform: translateY(-400px);
+                               -moz-transform: translateY(-400px);
+                                -ie-transform: translateY(-400px);
+                                 -o-transform: translateY(-400px);
+                                    transform: translateY(-400px);
+                        }
+                    </style>
+                    <div id="code-examples" class="fragment">
+                        <img id="primeira-imagem" src="images/slide-8-html-example.png"/>
+                        <img id="segunda-imagem" src="images/slide-9-js-example.png"/>
+                    </div>
+				</section>
+				<section data-transition="linear" data-background-size="900px" data-background="#AAFF99 url(images/slide-10-toolkits.png) no-repeat center">
+				</section>
+				<section data-transition="linear" data-background="#CCEEFF">
+                    <p style="font-style:italic">A ferramenta aria-check foi implementada como uma extensão do navegador web Firefox e utiliza testes para realizar a avaliação de acessibilidade de uma widget, sem a necessidade de conhecimentos da especificação ARIA.</p>
+
+				</section>
+<!--				<section data-transition="linear" data-background-size="900px" data-background="#99AAFF url(../../images/slide-11-aria-check.png) no-repeat center">
+				</section>-->
+
+
+                <section>
+					<h2>Referências</h2>
+					<ul>
+						<li>TIM BERNERS-LEE. Information Management: A Proposal, 1990. Disponível em: http://www.nic.funet.fi/index/FUNET/history/internet/w3c/proposal.html.</li>
+						<li>J. J. GARRET. Ajax: A new approach to web applications, 2005. Disponível em: http://adaptivepath.com/ideas/essays/archives/000385.php.</li>
+					</ul>
+                </section>
+
+				<section>
+					<h1>ARIA-CHECK</h1>
+					<h3>github.com/watinha/aria-check</h3>
+					<p>Willian Massami Watanabe</p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="../../lib/js/head.min.js"></script>
+		<script src="../../js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../../lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../../plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../../plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: '../../plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
